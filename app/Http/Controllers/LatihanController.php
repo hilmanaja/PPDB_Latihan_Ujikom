@@ -39,7 +39,7 @@ class LatihanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nis'=>'required',
+            'nis'=>'required|unique:latihan',
             'nama'=>'required',
             'jk'=>'required',
             'tempat'=>'required',
@@ -52,7 +52,7 @@ class LatihanController extends Controller
         ]);
 
         Latihan::create($request->all());
-        return redirect()->route('latihan.index')->with('success', 'Data Siswa Berhasil Ditambahkan');
+        return redirect()->route('landing')->with('success', 'Data Siswa Berhasil Ditambahkan');
     }
 
     /**
@@ -116,11 +116,13 @@ class LatihanController extends Controller
         return redirect()->route('latihan.index')->with('success', 'Data Siswa Berhasil Dihapus');
     }
 
-    public function cetak()
+    public function cetak($id)
     {
-        $latihan = Latihan::all();
+        $latihan = Latihan::find($id);
 
         $cetak = PDF::loadview('latihan.cetak', compact('latihan'));
         return $cetak->stream();
     }
+
+
 }

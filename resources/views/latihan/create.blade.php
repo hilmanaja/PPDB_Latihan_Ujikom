@@ -1,10 +1,5 @@
-@extends('layouts.master')
-@section('title', 'Data User')
-@section('pagetitle')
-<img alt="image" src="{{ asset('../dahsboard/img/logo-wk.png') }}" class="rounded-circle mr-1" style="width: 50px"> 
-  <h1>Tambah Data</h1>
-@endsection
-@section('content');
+@extends('layouts.app')
+@section('content')
 <div class="section-body">
     <div class="row">
         <div class="col-lg-6 mx-auto">
@@ -13,7 +8,9 @@
                  <form action="{{ route('latihan.store') }}" method="POST">
                    @csrf
                    <div class="card-header py-3">
-                      <h2 class="h6 m-0 font-weight-bold text-primary">Formulir Pendaftaran Siswa Baru</h2>
+                      <h2 class="h6 m-0 font-weight-bold text-primary"><img alt="image" src="{{ asset('../dahsboard/img/logo-wk.png') }}" class="rounded-circle mr-1" style="width: 40px"> 
+                        Formulir Pendaftaran Siswa Baru
+                      </h2>
                     </div>
                     
                   <div class="card-body">

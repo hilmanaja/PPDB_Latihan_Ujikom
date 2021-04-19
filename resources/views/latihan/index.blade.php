@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Data User')
+@section('title', 'Data Siswa Baru')
 @section('pagetitle')
 <img alt="image" src="{{ asset('../dahsboard/img/logo-wk.png') }}" class="rounded-circle mr-1" style="width: 50px"> 
   <h1>Data Pendaftaran Siswa Baru</h1>
@@ -19,10 +19,6 @@
 			<h2 class="h6 m-0 font-weight-bold text-primary">Data Pendaftaran Siswa Baru</h2>
             <div class="row">
                 <a href="{{ route('latihan.create') }}" class="btn px-2 btn-sm btn-primary shadow">Tambah Siswa</a>
-                <form action="{{route('latihan.cetak')}}" method="POST">
-                    @csrf
-                    <button type="submit" class="btn btn-sm btn-success shadow">Print</button>
-                </form>
                
             </div>
 			
@@ -60,6 +56,7 @@
                                 <td>{{$latihan->jurusan}}</td>
                                 <td>
                                     <a href="{{route('latihan.edit', $latihan->id)}}" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
+                                    <a href="{{route('latihan.cetak', $latihan->id)}}" class="btn px-2 btn-sm btn-primary shadow">Print</a>
                                     <form action="{{route('latihan.destroy', $latihan->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')

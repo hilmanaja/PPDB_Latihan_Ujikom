@@ -27,12 +27,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 });
 
-Route::get('latihan', 'LatihanController@create')->name('latihan.create');
+
+    
+    Route::get('/latihan/{id}/cetak', 'LatihanController@cetak')->name('latihan.cetak');
+    Route::resource('latihan', 'LatihanController');
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
-Route::post('/latihan/cetak', 'LatihanController@cetak')->name('latihan.cetak');
-Route::resource('latihan', 'LatihanController');
-Route::get('user', 'UserController@index')->name('user');
+    
+    //User
+    Route::get('user', 'UserController@index')->name('user');
     Route::get('create_user', 'UserController@create')->name('create_user');
     Route::post('simpan_user', 'UserController@store')->name('simpan_user');
     Route::get('edit_user/{id}', 'UserController@edit')->name('edit_user');

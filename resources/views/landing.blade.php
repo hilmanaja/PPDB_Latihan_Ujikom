@@ -46,7 +46,7 @@ https://templatemo.com/tm-537-art-factory
                 <div class="col-12">
                     <nav class="main-nav">
                         
-                        <img alt="image" src="assets/images/logo-wk.png" class="logo" style="width: 68px">
+                        <img alt="image" src="assets/images/logo-wk.png" class="logo" style="width: 67px">
                         <!-- ***** Logo Start ***** -->
                        <a href="#" class="logo">SMK WIKRAMA BOGOR</a>
                        
@@ -79,7 +79,7 @@ https://templatemo.com/tm-537-art-factory
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <h1>Penerimaan Siswa/Siswi<strong>Baru</strong></h1>
                         <p>Ilmu Yang Amaliah, Amal Yang Ilmiah, Akhlakul Karimah</p>
-                        <a href="/latihan" class="main-button-slider">Daftar Sekarang</a>
+                        <a href="latihan/create" class="main-button-slider">Daftar Sekarang</a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <img src="assets/images/slider-icon.png" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
